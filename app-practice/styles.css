@@ -1,0 +1,22 @@
+.right {
+  display: inline;
+  float:right;
+}
+span {
+  font-size: 30px;
+  color: #f04e2f;
+}
+
+.btn {
+  background: #f04e2f !important;
+  color: white;
+}
+
+
+.news {
+
+  padding: 7px 7px;
+  border-radius: 25px;
+  border: 2px solid #f04e2f;
+  text-align: center;
+}

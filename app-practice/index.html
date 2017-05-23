@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ticket Kiosk</title>
+
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+        <!--Our CSS-->
+        <link rel="stylesheet" href="styles.css">
+  </head>
+  <body ng-app="ticketKiosk" ng-controller="myCtrl">
+
+<div class="container-fluid">
+     <div class="page-header">
+       <span><b>Ticket Kiosk</b></span>
+       <span class="right"><b>News Feed</b></span>
+     </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p><b>Name:</b></p>
+      <p><b># of Tickets</b></p>
+      <p>Price:</p>
+      <p>Total:</p>
+
+    </div>
+    <div class="col-xs-4" ng-init="qty=1">
+
+        <input class="form-control input-sm" type="text" ng-model="name">
+
+        <input class="form-control input-sm" type="number" ng-model="qty">
+        <p>$2.50</p>
+        <p> {{ qty * 2.50 | currency }}
+        <p>
+<button type="button" class="btn btn-default" ng-click="buyTick(name, qty)">Buy</button></p>
+     </div>
+
+    <div class="col-sm-4">
+      <purchase-directive ng-repeat="purchase in purchased">
+      </purchase-directive>
+
+    </div>
+  </div>
+</div>
+
+        <!--Include Angular and UI.Bottstrap-->
+        <script src="lib/angular.min.js" charset="utf-8"></script>
+        <script src="lib/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
+        <!-- Our Scripts -->
+        <script src="js/app.js" charset="utf-8"></script>
+        <!--<script src="factory.js"></script>-->
+        <script src="controller.js"></script>
+  </body>
+</html>

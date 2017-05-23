@@ -3,15 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>temp converter</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body ng-app="myApp" ng-controller="myCtrl">
-    <input type="number" name="" value="" ng-model="temp" placeholder="temp">
-    <button type="button" ng-click="submit(temp)">Convert to C</button></br>
+<body ng-app="myApp" ng-controller="myCtrl">
+  <form>
+  <label>Enter a number and convert to Celsius:
+    <input type="number" ng-model="tempF" placeholder="temp F">
+    <button type="button" ng-click="submit(tempF)">Convert to C</button>
+  </label></br>
 
-    <input type="number" name="" value="" ng-model="temp" placeholder="temp">
-    <button type="button" ng-click="submit1(temp)">Convert to F</button>
+  <convert-directive ng-repeat="temperature in temperaturesC"></convert-directive>
 
-    <convert-directive ng-repeat="convert in convert"></convert-directive>
+  <label>Enter a number and convert to Fahrenheit:
+    <input type="number" ng-model="tempC" placeholder="temp C">
+    <button type="button" ng-click="submit1(tempC)">Convert to F</button>
+  </label>
+
+  </form>
+
+   <convert-directive-b ng-repeat="temperature in temperaturesF"></convert-directive-b>
 
 
   <script src="angular.min.js"></script>

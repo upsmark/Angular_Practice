@@ -7,7 +7,7 @@ app.controller('myCtrl', function($scope){
   $scope.submit = function(temp){
 
     $scope.temperaturesC.push((temp * 9/5)+32);
-
+      
        }
 
 

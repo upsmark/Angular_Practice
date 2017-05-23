@@ -6,10 +6,10 @@
   </head>
   <body ng-app="myApp" ng-controller="myCtrl">
     <input type="number" name="" value="" ng-model="temp" placeholder="temp">
-    <button type="button" ng-click="submit(temp, unit)">Convert to C</button></br>
+    <button type="button" ng-click="submit(temp)">Convert to C</button></br>
 
     <input type="number" name="" value="" ng-model="temp" placeholder="temp">
-    <button type="button" ng-click="submit(temp, unit)">Convert to F</button>
+    <button type="button" ng-click="submit1(temp)">Convert to F</button>
 
     <convert-directive ng-repeat="convert in convert"></convert-directive>
 

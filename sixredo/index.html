@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>sixredo</title>
+
+
+</head>
+  <body ng-app="myApp" ng-controller="ourController">
+
+    <h1>Six-year old simulator</h1>
+
+   <div>
+    <button ng-click="addWord()">words</button>
+    <button ng-click="addWordDec()">words with decorations</button>
+    <button ng-click="addWordMore()">more words</button>
+    <button ng-click="addWordMoreDec()">more words with decorations</button>
+   </div>
+
+  <span ng-class="word.cls" ng-repeat="word in wordList track by $index"> {{word.name}} </span>
+  <span ng-class="word.cls" ng-repeat="word in phraseList track by $index"> {{word.name}} </span>
+
+
+
+    <script src="angular.min.js" charset="utf-8"></script>
+    <!--<script src="lib/angular-route.min.js" charset="utf-8"></script>-->
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html>
+ <script src="angular.min.js"></script>
   <head>
     <meta charset="utf-8">
     <title>fizzbuzz</title>
   </head>
-  <body>
-  <script src="script2.js"></script>
+   <body ng-app="fizzbuzz" ng-controller="control">
+
+     <div ng-repeat="result in result track by $index">
+
+       {{ result }}
+
+     </div>
+
+  <script>
+    var app = angular.module('fizzbuzz', []);
+
+    app.controller('control', function($scope){
+
+               $scope.result = [];
+
+        $scope.loop = function(){
+
+             for (var i = 1; i <= 100; i++) {
+                  if (i % 15 === 0) {
+                    $scope.result.push('fizzbuzz');
+                  } else if (i % 5 === 0) {
+                    $scope.result.push('buzz');
+                  } else if (i % 3 === 0) {
+                    $scope.result.push('fizz');
+                  } else {
+                    $scope.result.push(i);
+                  }
+              }
+         };
+         $scope.loop()
+
+    });
+
+  </script>
   </body>
 </html>

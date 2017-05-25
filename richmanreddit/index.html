@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <h3>Maps from reddit</h3>
+  <body ng-app='mapModule'ng-controller='mapCtrl'>
+
+<div ng-repeat="maps in maps">{{ maps.data.title }}</div>
+
+  <!--<map-posts></map-posts>-->
+
+
+
+
+
+
+
+  <script src="angular-route.min.js"></script>
+  <script src="mapModule.js"></script>
+  <script src="directive.js"></script>
+  <script src="controller.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>final redo</title>
+  </head>
+  <body ng-app="myApp" ng-controller="myCtrl">
+
+  <input type="text" name="" value="" ng-model="name">
+      {{ name }}
+  <input type="number" name="" value="" ng-model="qty">
+      {{ qty * 2.50 | currency }}
+
+  <button type="button" name="button" ng-click="buyNow(name,qty)">buy</button>
+
+  <div ng-repeat="bought in bought track by $index">{{ bought }}</div>
+
+  <script src="angular.min.js"></script>
+  <script src="script.js"></script>
+  </body>
+</html>
